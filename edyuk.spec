@@ -16,7 +16,6 @@ Source0:	http://download.tuxfamily.org/edyuk/%{name}-%{version}.tar.bz2
 Patch1:		edyuk-1.1.0.desktop.patch.bz2
 Patch2:		edyuk-1.1.0.qt4.5.patch.bz2
 BuildRequires:	qt4-devel
-BuildRequires:	libqthelp4
 Requires:	%{libname} = %{version}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
