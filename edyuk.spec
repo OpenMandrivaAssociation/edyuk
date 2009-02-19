@@ -1,5 +1,5 @@
 %define version		1.1.0
-%define release		%mkrel 1
+%define release		%mkrel 2
 
 %define major		1
 %define libname		%mklibname %{name} %{major}
