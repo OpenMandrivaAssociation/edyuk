@@ -15,6 +15,7 @@ URL:		http://edyuk.org/
 Source0:	http://download.tuxfamily.org/edyuk/%{name}-%{version}.tar.bz2
 Patch1:		edyuk-1.1.0.desktop.patch.bz2
 Patch2:		edyuk-1.1.0.qt4.5.patch.bz2
+Patch3:		edyuk-1.1.0.version.patch.bz2
 BuildRequires:	qt4-devel
 Requires:	%{libname} = %{version}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
@@ -46,10 +47,11 @@ Provides:	lib%{name}-devel = %{version}
 Development files needed to create edyuk plugins.
 
 
-%prep		
+%prep
 %setup -q -n %{name}-%{version}
 %patch1
 %patch2 
+%patch3 
 
 %build
 %qmake_qt4
@@ -62,16 +64,12 @@ Development files needed to create edyuk plugins.
 %makeinstall INSTALL_ROOT=%{buildroot}
 
 %__install -m755 %{name}.bin %{buildroot}%{_bindir}
+%__install -m755 -p libedyuk.so %{buildroot}%{_libdir}
 
 # Already defined in freedesktop.org.xml
 rm -rf %{buildroot}%{_datadir}/mime/packages/%{name}.xml
 rm -rf %{buildroot}%{_datadir}/icons/gnome
 mv %{buildroot}%{_datadir}/icons/default.kde %{buildroot}%{_datadir}/icons/hicolor
-rm -f %{buildroot}%{_libdir}/libedyuk.so{.1.0,.1,}
-%__install -m755 lib%{name}.so.1.0.0 %{buildroot}%{_libdir}
-ln -s lib%{name}.so.1.0.0 %{buildroot}%{_libdir}/lib%{name}.so
-ln -s lib%{name}.so.1.0.0 %{buildroot}%{_libdir}/lib%{name}.so.1
-ln -s lib%{name}.so.1.0.0 %{buildroot}%{_libdir}/lib%{name}.so.1.0
 
 # Fixed permission
 chmod 644 %{buildroot}%{_libdir}/qt4/include/Edyuk/*
