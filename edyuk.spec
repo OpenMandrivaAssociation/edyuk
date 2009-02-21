@@ -71,9 +71,6 @@ rm -rf %{buildroot}%{_datadir}/mime/packages/%{name}.xml
 rm -rf %{buildroot}%{_datadir}/icons/gnome
 mv %{buildroot}%{_datadir}/icons/default.kde %{buildroot}%{_datadir}/icons/hicolor
 
-# Fixed permission
-chmod 644 %{buildroot}%{_libdir}/qt4/include/Edyuk/*
-
 %if %mdkversion < 200900
 %post
 %update_menus
