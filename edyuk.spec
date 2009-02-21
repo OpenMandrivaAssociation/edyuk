@@ -63,6 +63,7 @@ Development files needed to create edyuk plugins.
 
 %makeinstall INSTALL_ROOT=%{buildroot}
 
+%__install -d -m755 %{buildroot}%{_libdir}
 %__install -m755 %{name}.bin %{buildroot}%{_bindir}
 %__install -m755 -p libedyuk.so %{buildroot}%{_libdir}
 
@@ -113,6 +114,6 @@ rm -rf %{buildroot}
 %files -n %{libnamedev}
 %defattr(-,root,root,0755) 
 %doc GPL.txt
-%{_libdir}/qt4/include/Edyuk
-%{_libdir}/qt4/mkspecs/features/*.prf
+%{_prefix}/lib/qt4/include/Edyuk
+%{_prefix}/lib/qt4/mkspecs/features/*.prf
 %{_libdir}/lib%{name}.so
