@@ -1,2 +1,5 @@
 sources:
-  "edyuk-1.1.0.tar.bz2:"	14241e004dd8df673f8a0a838a37086a709243db
+  "edyuk-1.1.0.desktop.patch.bz2": 2358c5f64d1dd4cc042d3e57aa2cf2cd5339d780
+  "edyuk-1.1.0.qt4.5.patch.bz2": 84f0feb2bb5fd68d8f013d7867a2160cf3683876
+  "edyuk-1.1.0.tar.bz2": 14241e004dd8df673f8a0a838a37086a709243db
+  "edyuk-1.1.0.version.patch.bz2": 29e8a336f08103528ac037655b5494622ee4d48a
