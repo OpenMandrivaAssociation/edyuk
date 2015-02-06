@@ -5,7 +5,7 @@
 Summary:	Edyuk - fully-featured, highly flexible IDE for Qt 4
 Name:		edyuk
 Version:	1.1.0
-Release:	5
+Release:	6
 License:	GPLv3
 Group:		Development/KDE and Qt
 URL:		http://edyuk.org/
