@@ -8,7 +8,7 @@ Version:	1.1.0
 Release:	6
 License:	GPLv3
 Group:		Development/KDE and Qt
-URL:		http://edyuk.org/
+URL:		https://edyuk.org/
 Source0:	http://download.tuxfamily.org/edyuk/%{name}-%{version}.tar.bz2
 Patch1:		edyuk-1.1.0.desktop.patch.bz2
 Patch2:		edyuk-1.1.0.qt4.5.patch.bz2
